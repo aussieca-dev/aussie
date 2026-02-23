@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>By Spark Pleazer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="toggle"></div>
+        <li style="--i:0;--clr:#ff2d2d;">
+            <a href="#"><input class="value" type="text" value="#ff2d2d" onclick="changeC(this.value)"></a>
+        </li>
+        <li style="--i:1;--clr:#2dff4c;">
+            <a href="#"><input class="value" type="text" value="#2dff4c" onclick="changeC(this.value)"></a>
+        </li>
+        <li style="--i:2;--clr:#2dff9d;">
+            <a href="#"><input class="value" type="text" value="#2dff9d" onclick="changeC(this.value)"></a>
+        </li>
+        <li style="--i:3;--clr:#2ddfff;">
+            <a href="#"><input class="value" type="text" value="#2ddfff" onclick="changeC(this.value)"></a>
+        </li>
+        <li style="--i:4;--clr:#4c2dff;">
+            <a href="#"><input class="value" type="text" value="#4c2dff" onclick="changeC(this.value)"></a>
+        </li>
+        <li style="--i:5;--clr:#8b2dff;">
+            <a href="#"><input class="value" type="text" value="#8b2dff" onclick="changeC(this.value)"></a>
+        </li>
+        <li style="--i:6;--clr:#e62dff;">
+            <a href="#"><input class="value" type="text" value="#e62dff" onclick="changeC(this.value)"></a>
+        </li>
+        <li style="--i:7;--clr:#f8ff2d;">
+            <a href="#"><input class="value" type="text" value="#f8ff2d" onclick="changeC(this.value)"></a>
+        </li> 
+</div>
+<script>
+    let toggle = document.querySelector('.toggle');
+    let menu = document.querySelector('.menu');
+    toggle.onclick = function(){
+        menu.classList.toggle('active')
+    }
+</script>
+<script>
+    function changeC(value)
+    {
+    document.body.style.backgroundColor = value;
+    }
+</script>
+</body>
+</html>

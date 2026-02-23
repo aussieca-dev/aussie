@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Sans&family=Montserrat:wght@700&family=Pacifico&family=Rubik:wght@300&family=Sansita&family=Teko:wght@600&display=swap');
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(https://cdn.wallpapersafari.com/14/89/PGQqf9.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Rubik', sans-serif;
+}
+.main
+{
+    position: relative;
+    background: #ffffff3e;
+    backdrop-filter: blur(30px);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+    overflow: hidden;
+}
+.container
+{
+    position: relative;
+    height: auto;
+    width: auto;
+    background: #007aff;
+    border-radius: 20px;
+    padding-left: 150px;
+    padding-top: 150px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.main:hover .container
+{
+    padding-left: 100px;
+    padding-top: 0px;
+}
+.container .image
+{
+    position: absolute;
+    left: 20px;
+    bottom: -150px;
+    height: 300px;
+    width: auto;
+    transition: 0.5s;
+}
+.main:hover .container .image
+{
+    left: 0;
+    bottom: 0;
+}
+.container .image img
+{
+    width: auto;
+    height: 100%;
+}
+.container .details
+{
+    position: relative;
+    width: 0px;
+    height: 0px;
+    font-size: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.main:hover .container .details
+{
+    width: 200px;
+    height: 150px;
+}
+.container .details .discrip
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 120px;
+    width: 160px;
+    font-size: 10px;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px;
+}
+.container .details .discrip p
+{
+    color: #ffffff;
+    font-size: 17px;
+    margin: 0;
+    font-weight: 800;
+}
+.container .details .discrip p span
+{
+    color: #ffffffc7;
+    font-size: 13px;
+}
+.main .info
+{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    font-size: 0px;
+    border-radius: 15px;
+    background: #007aff;
+    transform: skew(0deg);
+    transition: 0.5s;
+}
+.main:hover .info
+{
+    width: 170px;
+    height: 130px;
+    padding: 5px;
+    font-size: 10px;
+}
+.main:hover .info h2, .main:hover .info h2 span
+
+{
+    opacity: 1;
+    transform: scale(1);
+}
+.info h2
+{
+    font-size: 17px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 10px;
+    transition: 0.5s;
+    opacity: 0;
+    transform: scale(0);
+}
+.info h2 span
+{
+    color: #ffffffc7;
+}

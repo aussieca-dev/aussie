@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Sans&family=Montserrat:wght@700&family=Teko:wght@600&display=swap');
+body
+{
+    background: rgb(198, 198, 198);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.container
+{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.box
+{
+    position: relative;
+    border: 3px solid #000;
+    border-right: 3px solid #000;
+    background: #000;
+    border-radius: 40px 40px 0px 0px;
+    height: 300px;
+    width: 200px;
+    margin: 10px;
+    transition: 0.5s;
+}
+.box:hover
+{
+    box-shadow: 10px -6px 20px 0 rgb(255, 255, 255);
+    border-right: 5px solid #000;
+    margin: 70px;
+}
+.box .front
+{
+    position: absolute;
+    width: 99%;
+    bottom: 0;   
+    left: 0px;
+    transition: 1s;
+    z-index: 100;
+    filter: grayscale(1);
+}
+.box:hover .front
+{
+    width: 110%;
+    left: -25px;
+    filter: grayscale(0);
+}
+.box .back
+{
+    border-radius: 40px 40px 0px 0px;
+    height: 300px;
+    width: 200px;
+    z-index: -100;
+    filter: brightness(1);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.box:hover .back
+{
+    filter: brightness(0.6);
+}
+.box .back img
+{
+    width: 100%;
+}
+.box span
+{
+    position: absolute;
+    padding: 5px 5px;
+    top: 100px;
+    right: 100px;
+    height: 0px;
+    width: 0px;
+    text-align: center;
+    z-index: 200;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    border: 5px solid #000;
+    font-size: 25px;
+    transition: 0.5s;
+    transition-delay: calc(0.2s * var(--i));
+    transform: scale(0);
+    opacity: 0;
+    cursor: pointer;
+    animation: 3s anime linear infinite;
+    animation-delay: calc(0.3s * var(--i));
+}
+.box:hover span
+{
+    transform: scale(1);
+    opacity: 1;
+}
+.box:hover .btn_1
+{
+    right: -25px;
+    top: 60px;
+    height: 25px;
+    width: 25px;
+    font-size: 25px;
+}
+.box:hover .btn_2
+{
+    top: -20px;
+    right: 30px;
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+}
+.box:hover .btn_3
+{
+    top: 10px;
+    right: -20px;
+    height: 15px;
+    width: 15px;
+    font-size: 15px;
+}
+.box:hover .btn_1:hover, .box:hover .btn_2:hover, .box:hover .btn_3:hover
+{
+    border: 5px solid var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 20px 0 var(--clr);
+}
+.box .name
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 200;
+    font-size: 0px;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+    font-family: 'Bangers', cursive;
+    animation: 3s anime linear infinite;
+    transition: 0.5s;
+}
+.box:hover .name
+{
+    font-size: 50px;
+    bottom: -60px;
+    left: -50px;
+}
+.box .follow, .box .chat
+{
+    position: absolute;
+    border-radius: 5px;
+    border: 5px solid #000;
+    background: #fff;
+    height: 40px;
+    width: 100px;
+    right: -40px;
+    bottom: 200px;
+    font-size: 15px;
+    font-weight: 600;
+    transform: skewX(-20deg);
+    opacity: 0;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+.box:hover .follow
+{
+    right: -60px;
+    bottom: 50px;
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+.box:hover .chat
+{
+    right: -60px;
+    bottom: 100px; 
+    opacity: 1;
+}
+@keyframes anime
+{
+    0%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(-4px);
+    }
+    80%
+    {
+        transform: translateY(-3px);
+    }
+    100%
+    {
+        transform: translateY(0px);
+    }
+}
+

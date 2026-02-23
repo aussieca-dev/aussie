@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="border: 3px solid red;">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By Spark Pleazer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="back"><img id="image" src="https://dynamicwallpaper.club/landing-vids/1.png" alt=""></div>
+
+    <div class="container">
+        <div class="wallpapers">
+        <div class="break"></div>
+        <div class="wallpaper" style="--i:1;" id="wall">
+            <img src="https://4kwallpapers.com/images/wallpapers/macos-big-sur-apple-layers-fluidic-colorful-wwdc-stock-4096x2304-1455.jpg" id="wallImg" onclick="changeC(this.src)" alt="">
+        </div>
+        <div class="wallpaper" style="--i:2;" id="wall">
+            <img src="https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/material-style-8k-2560x1600/23774-11.jpg" id="wallImg" onclick="changeC(this.src)" alt="">
+        </div>
+        <div class="wallpaper" style="--i:3;">
+            <img src="https://cdn.wallpapersafari.com/14/89/PGQqf9.jpg" id="wallImg" onclick="changeC(this.src)" alt="">
+        </div>
+        <div class="wallpaper" style="--i:4;">
+            <img src="https://dynamicwallpaper.club/landing-vids/1.png" onclick="changeC(this.src)" alt="">
+        </div>
+    </div>
+    </div>
+
+<script>
+        function changeC(src)
+    {
+    document.getElementById("image").src = src;
+    }
+    let container = document.querySelector('.container');
+    container.ondblclick = () => {
+            container.classList.toggle('active');
+};
+</script>
+</body>
+</html>

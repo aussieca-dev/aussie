@@ -1,0 +1,233 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #060013;
+}
+.menu
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu .toggle
+{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+	color: #ffffff;
+    background: #222222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    transition: 0.5s;
+	-wbkit-box-reflect: below 1px linear-gradient(transparent,rgb(0, 0, 0));
+    overflow: hidden;
+
+}
+.menu .toggle ion-icon
+{ 
+    z-index: 1;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: 1s;
+}
+
+.menu .toggle::after
+{
+    content: '';
+    position:absolute;
+    inset: 4px;
+	border-radius: 50%;
+    background: #000000;
+    transition: 1s;
+ 
+}
+.menu .toggle::before
+{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5000px;
+    background: rgb(0, 255, 0);
+    transition: 0.5s;
+    animation: animate 3s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+ }
+.menu .toggle.active::after
+{
+    content: '';
+    position:absolute;
+    inset: 4px;
+	border-radius: 50%;
+    background: #060013;
+    transition: 1s;
+ 
+}
+.menu .toggle.active::before
+{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5000px;
+    background: rgb(0, 255, 64);
+    transition: 3s;
+    animation: animate 3s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+}
+@keyframes animate
+{
+0%
+{
+    transform: rotate(0deg);
+}
+    100%
+    {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+.menu .toggle.active
+{
+    transform: rotate(315deg);
+    box-shadow: 0 0 0 68px #191927ec;
+    border-radius: 50%;
+	width: 75px;
+    height: 75px;
+    background: #060013;
+    color: #222237;
+}
+.menu li
+{
+    position: absolute;
+    left: 10px;
+    list-style: none;
+    transform: rotate(calc(360deg / 8 * var(--i))) translateX(40px);
+    transform-origin: 140px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 10;
+}
+.menu.active li
+{
+    visibility: visible;
+    opacity: 1;
+}
+.menu li a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    font-size: 1.75em;
+    color: #ffffff;
+    transform: rotate(calc(360deg / -8 * var(--i)));
+    border-radius: 50%;
+}
+.menu.active li.active 
+{
+    transform: rotate(calc(360deg / 8 * var(--i))) translateX(12px);
+ 
+}
+.menu.active li.active a
+{
+ 	color: #000000;
+    font-size: 2.5em;
+}
+
+.indicator
+{
+    position: absolute;
+    left: calc(50% + 2.5px);
+    transform-origin: right;
+    width: 100px;
+    height: 1px;
+    background: transparent;
+    pointer-events: none;
+    transition: 0.5s;
+    
+}
+.indicator::before
+{
+    content: '';
+    position: absolute;
+    top: -27.5px;
+    left: 72px;
+    width: 55px;
+    height: 55px;
+    background: #ffffff;
+    box-shadow: 0 0 0 6px  #060013;
+    border-radius: 50%;
+    transition: 0.5s;
+    opacity: 0;
+    animation: animate 3s linear infinite;
+
+    
+}
+ 
+.menu.active .indicator::before
+{
+    opacity: 1;
+    top: -27.5px;
+    left: -27.5px;
+	width: 55px;
+    height: 55px;
+    background: rgb(0, 255, 0);
+    transition: 0.5s;
+     animation-delay: calc(0.33s * var(--i)); 
+    z-index: -1000px;
+}
+.menu li:nth-child(2).active ~ .indicator
+{
+    transform: translateX(-103px) rotate(0deg);
+}
+.menu li:nth-child(3).active ~ .indicator
+{
+    transform: translateX(-103px) rotate(45deg);
+}
+.menu li:nth-child(4).active ~ .indicator
+{
+    transform: translateX(-103px) rotate(90deg);
+}
+.menu li:nth-child(5).active ~ .indicator
+{
+    transform: translateX(-103px) rotate(135deg);
+}
+.menu li:nth-child(6).active ~ .indicator
+{
+    transform: translateX(-103px) rotate(180deg);
+}
+.menu li:nth-child(7).active ~ .indicator
+{
+    transform: translateX(-103px) rotate(225deg);
+}
+.menu li:nth-child(8).active ~ .indicator
+{
+    transform: translateX(-103px) rotate(270deg);
+}
+.menu li:nth-child(9).active ~ .indicator
+{
+    transform: translateX(-103px) rotate(315deg);
+}
+ 
