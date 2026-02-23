@@ -1,0 +1,208 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    }
+    body
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: rgb(21, 0, 41);
+    }
+    .container
+    {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        padding: 30px;
+        background: rgb(49, 0, 89);
+        border-radius: 20px 20px 2px 2px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 2px solid rgb(0, 0, 0);
+        border-bottom: 1px solid rgba(0, 0, 0, 0) ;
+        gap: 10px;
+        padding-bottom: 70px;
+        transition: 0.5s;
+        -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0005);
+    }
+    .container:hover
+    {
+        width: 450px;
+        height: 250px;
+    }
+    .container.weak
+    {
+
+
+    }
+    .container.medium
+    {
+        
+        
+    }
+    .container.strong 
+    {
+
+    }
+    .container h2
+    {
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        text-align: center;
+    }
+    .container .inputbox
+    {
+        position:relative;
+        width: 100%;
+    }
+    .container .inputbox input
+    {
+        position: relative;
+        width: 100%;
+        background: #490080;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding: 10px;
+        color: #fff;
+        font-size: 1.1em;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .container.weak .inputbox input
+    {
+        color: rgb(255, 0, 0);
+    } 
+    .container.medium .inputbox input
+    {
+        color: #ffa500;
+    } 
+    .container.strong .inputbox input
+    {
+        color: #0f0;
+    } 
+    .container .strengthmeter
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: #222;
+    }
+    .container .strengthmeter::before
+    {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 100%;
+        transition: 0.5s;
+    }
+    .container.weak .strengthmeter::before
+    {
+        width: 10%;
+        background: #f00;
+        filter: drop-shadow( 0 0 5px #f00) drop-shadow( 0 0 10px #f00) drop-shadow( 0 0 20px #f00);
+    }
+    .container.medium .strengthmeter::before
+    {
+        width: 66.66%;
+        background: #ffa500;
+        filter: drop-shadow( 0 0 5px #ffa500) drop-shadow( 0 0 10px #ffa500) drop-shadow( 0 0 20px #ffa500);
+    }
+    .container.strong .strengthmeter::before
+    {
+        width: 100%;
+        background: #0f0;
+        filter: drop-shadow( 0 0 5px #0f0) drop-shadow( 0 0 10px #0f0) drop-shadow( 0 0 20px #0f0);
+    }
+    .container .strengthmeter::after
+    {
+        position: absolute;
+        top: -45px;
+        left: 30px;
+        color:  #fff;
+        transition: 0.5s;
+    }
+    .container.weak .strengthmeter::after
+    {
+        content: 'Your Password is Weak';
+        color:  #f00;
+        filter: drop-shadow(0 0 5px #f00);
+    }
+    .container.medium .strengthmeter::after
+    {
+        content: 'Your Password is Medium';
+        color:  #ffa500;
+        filter: drop-shadow(0 0 5px #ffa500);
+    }
+    .container.strong .strengthmeter::after
+    {
+        content: 'Your Password is Strong';
+        color:  #0f0;
+        filter: drop-shadow(0 0 5px #0f0);
+    }
+    .show
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 100%;
+        background: #33005e;
+        border: 6px solid #490080;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+    .show::before
+    {
+        content: 'show';
+        font-size: 10px;
+        font-weight: 1000;
+        color: rgb(0, 255, 26);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+    .show.hide::before
+    {
+        content: 'hide';
+        color: rgb(255, 0, 0);
+    }
+    .gen
+    {
+        background: rgb(255, 0, 119);
+        border-radius: 10px;
+        transition: 0.5s;
+        cursor: pointer;
+        border: 0;
+    }
+    .gen::after
+    {
+        content: 'GENERATE';
+        color:  rgb(255, 255, 255);
+        font-size: 1.7em;
+        border-radius: 10px;
+        filter: drop-shadow(0 0 0px rgb(255, 255, 255));
+        height: 200px;
+        transition: 0.5s;
+    }
+    .gen:hover
+    {
+        background: rgba(255, 0, 119, 0); 
+    }
+    .gen:hover::after
+    {
+        font-size: 2em;
+        filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+    }

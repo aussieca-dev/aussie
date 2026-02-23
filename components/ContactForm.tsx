@@ -90,8 +90,8 @@ const ContactForm = () => {
             Get in Touch
           </h3>
           <p className="w-full text-left text-sm md:text-xl Geist mb-6 text-foreground">
-            Have an idea, question, or project in mind? We'd love to hear from
-            you! Reach out to Arctic Base and let's build something awesome
+            Have an idea, question, or project in mind? We&apos;d love to hear
+            from you! Reach out to Arctic Base and let&apos;s build something awesome
             together—no delays, no fuss, just clear communication and great
             collaboration.
           </p>

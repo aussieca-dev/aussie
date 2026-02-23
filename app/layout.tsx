@@ -76,8 +76,7 @@ export const metadata = {
   metadataBase: new URL("https://arcticbase.tech"),
 };
 
-export const runtime = "edge";
-
+ 
 export default function RootLayout({
   children,
 }: Readonly<{

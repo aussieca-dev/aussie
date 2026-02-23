@@ -49,7 +49,6 @@ const teamMembers = [
   // },
 ];
 
-export const runtime = "edge";
 
 
 export default function AboutPage() {

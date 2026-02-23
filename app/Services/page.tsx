@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import Image from "next/image";
 
-export const runtime = "edge";
 
 interface Service {
   title: string;
@@ -207,7 +206,7 @@ export default function Services() {
           <div className="overflow-hidden">
             <p className="text-lg md:text-xl lg:text-2xl Geist text-muted-foreground max-w-4xl leading-relaxed animate-fade-in-up [animation-delay:300ms]">
               Everything you need to bring your ideas to life, done by students who actually care
-              <span className="text-primary"> (and won't overcharge you)</span>.
+              <span className="text-primary"> (and won&apos;t overcharge you)</span>.
             </p>
           </div>
 

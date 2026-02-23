@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By Spark Pleazer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+        <h2>Create Password</h2>
+    <div class="inputbox">
+    <input type="password" onkeyup="check()" placeholder="Create HERE" id="mypassword">
+     <div class="show"></div>
+    </div>
+         <button class="gen" onclick="someFunc()"></button>    
+    <div class="strengthmeter"></div>
+</div>
+<script>
+
+function someFunc() {
+    genPassword();
+    check();
+}
+
+
+    function Strength(password){
+        let i = 0;
+        if(password.length > 6){
+            i++;
+        }
+        if(password.length >= 10){
+            i++;
+        }
+	    if(/[A-Z]/.test(password)){
+	        i++;
+        }    
+	    if(/[0-9]/.test(password)){
+	         i++;
+    	}
+	    if(/[A-Za-z0-8]/.test(password)){ 
+	         i++;
+    	}
+	    return i;
+}
+
+    let container = document.querySelector('.container');
+    function check(){
+    let password = document.querySelector('#mypassword').value;
+
+    let strength = Strength(password);
+    if(strength <= 2){
+        container.classList.add('weak');
+        container.classList.remove('medium');
+        container.classList.remove('strong');
+    } else  if(strength >= 2 && strength <= 4)
+    {
+        container.classList.remove('weak');
+        container.classList.add('medium');
+        container.classList.remove('strong');
+    } else  {
+        container.classList.remove('weak');
+        container.classList.remove('medium');
+        container.classList.add('strong');
+    }
+    }
+</script>
+<script>
+    let pswrd = document.querySelector('#mypassword');
+    let show = document.querySelector('.show');
+    show.onclick = function(){
+        if(pswrd.type === 'password'){
+            pswrd.setAttribute('type','text');
+            show.classList.add('hide');
+        }
+        else {
+            pswrd.setAttribute('type','password');
+            show.classList.remove('hide');
+        }
+    }
+</script>
+<script>
+    var password=document.getElementById("mypassword");
+
+function genPassword() {
+   var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   var passwordLength = 12;
+   var password = "";
+for (var i = 0; i <= passwordLength; i++) {
+  var randomNumber = Math.floor(Math.random() * chars.length);
+  password += chars.substring(randomNumber, randomNumber +1);
+ }
+       document.getElementById("mypassword").value = password;
+}
+
+function copyPassword() {
+ var copyText = document.getElementById("password");
+ copyText.select();
+ document.execCommand("copy");  
+}
+</script>
+</body>
+</html>

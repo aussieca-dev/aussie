@@ -1,0 +1,130 @@
+body {
+    font-family: tahoma;
+    height: 100vh;
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container
+  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .our-team {
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: #cd68ff3a;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+  
+  .our-team .picture {
+    display: inline-block;
+    height: auto;
+    width: 200px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(0);
+    background-color: #0077ff;
+    position: absolute;
+    border: 5px solid #fff;
+    bottom: 80%;
+    right: 0;
+    left: 25%;
+    z-index: 0;
+    transition: all 0.3s linear 0s;
+  }
+  
+  .our-team:hover .picture::before {
+    transform: scale(2);
+  }
+  .our-team .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+    border: 0px solid #1369ce;
+  }
+  
+  .our-team:hover .picture img {
+    box-shadow: 0 0 0 12px #ffffff;
+    transform: scale(0.8);
+    border-radius: 50%;
+    border: 5px solid #1369ce;
+  }
+  .our-team .name 
+  {
+    color: #ffffffdb;
+  }
+  .our-team .title 
+  {
+    display: block;
+    font-size: 15px;
+    color: #ffffff9d;
+    text-transform: capitalize;
+  }
+  
+  .our-team .social {
+    width: auto;
+    position: relative;
+    padding: 5px;
+    border-radius: 15px;
+    margin: 0;
+    background-color: #ffffff3c;
+    bottom: -100px;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .our-team:hover .social {
+    bottom: 0;
+  }
+  
+  .our-team .social li 
+  {
+    display: inline-block;
+    background: #00000018;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  .our-team .social li:hover 
+ {
+    background: #0077ff;
+ }
+  .our-team .social li a {
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+  }
+  
