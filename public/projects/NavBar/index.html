@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By Spark Pleazer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+<body>
+    <div class="sideBar">
+        <div class="closeBTN"><span>+</span></div>
+        <div class="profile">
+            <div class="profile-img">
+                <img src="icons/logo.png" alt="">
+            </div>
+            <p style="color: #00000080; font-weight: 600;">Good Day <span style="color: #000000; font-weight: 600;">👋<br> Ronit K.</span></p>
+        </div>
+        <div class="menu">
+            <p class="heading">Menu: <span>6</span></p>
+            <div class="list">
+                <div class="li"><img src="icons/icons8-dashboard-layout-96.png" alt=""> Dashboard</div>
+                <div class="li active"><img src="icons/icons8-folder-96.png" alt=""> My project task</div>
+                <div class="li"><img src="icons/icons8-calendar-96.png" alt=""> Calendar</div>
+                <div class="li"><img src="icons/icons8-composing-mail-96.png" alt=""> Mail</div>
+                <div class="li"><img src="icons/icons8-topic-push-notification-96.png" alt=""> Notification</div>
+                <div class="li"><img src="icons/icons8-shopping-cart-96.png" alt=""> Sales</div>
+
+            </div>
+
+        </div>
+        <div class="service">
+            <p class="heading">Service: <span>3</span></p>
+            <div class="list">
+            <div class="li"><img src="icons/icons8-html-64.png" alt=""> HTML</div>
+            <div class="li"><img src="icons/icons8-javascript-64.png" alt=""> JavaScript</div>
+            <div class="li"><img src="icons/icons8-php-64.png" alt=""> PHP</div>
+            <div class="li"><img src="icons/icons8-java-64.png" alt=""> JAVA</div>
+            </div>
+        </div>
+        <div class="settings">
+            <p class="heading">Settings: <span>6</span></p>
+            <div class="option">
+                <div class="icon active"><img src="icons/icons8-color-dropper-90.png" alt=""></div>
+                <div class="icon"><img src="icons/icons8-overview-90.png" alt=""></div>
+                <div class="icon"><img src="icons/icons8-pie-chart-50.png" alt=""></div>
+                <div class="icon"><img src="icons/icons8-settings-90.png" alt=""></div>
+                <div class="icon"><img src="icons/icons8-user-settings-67.png" alt=""></div>
+                <div class="icon"><img src="icons/icons8-light-on-24.png" alt=""></div>
+            </div>
+            <div class="task">
+                <button>+</button>
+                <br>
+                <p style="font-weight: 600;">Create new task <br><span style="color:rgb(148, 148, 148)">Or use </span><span style="color: #ffc400; font-weight: 700;">invite link</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var list = document.querySelectorAll('.li');
+      function activeLink(){
+        list.forEach((item) =>
+          item.classList.remove('active'));
+          this.classList.add('active')      }
+      list.forEach((item) =>
+      item.addEventListener('click',activeLink));
+
+      var option = document.querySelectorAll('.icon');
+      function active(){
+        option.forEach((item) =>
+          item.classList.remove('active'));
+          this.classList.add('active')      }
+          option.forEach((item) =>
+      item.addEventListener('click',active));
+</script> 
+<script>
+      var ToggleBTN = document.querySelector('.closeBTN');
+      var Side = document.querySelector('.sideBar');
+      ToggleBTN.onclick = () => {
+        Side.classList.toggle('active');
+};</script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #10131c;
+}
+.navigation
+{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #10131c;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transition-delay: 0.8s;
+    z-index: 1000;
+    overflow: hidden;
+    border: 1px solid rgb(255, 255, 255);
+
+}
+.navigation::before
+{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background: #00d0ff;
+    transition: 1s;
+    animation: animate 4s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+    z-index: 0;
+    border: 2px solid rgb(255, 255, 255);
+
+}
+.navigation:hover::before
+{
+   width: 450px;
+   height: 450px;
+}
+    @keyframes animate
+    {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+        100%
+        {
+            transform: rotate(360deg);
+            filter: hue-rotate(360deg);
+        }
+}
+.navigation::after
+{
+    content: '';
+    position:absolute;
+    inset: 4px;
+    background: #10131c;
+    transition: 0.5s;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+}
+.navigation.active::before
+{
+    border: 3px solid rgb(0, 0, 0);
+}
+.navigation.active::after
+{
+    border: 3px solid rgb(0, 0, 0);
+}
+.navigation.active
+{
+    width: 200px;
+    height: 200px;
+    transition-delay: 0s;
+    z-index: 1000;
+    background: #ffffff;
+    border: 3px solid rgb(0, 0, 0);
+
+}
+.navigation span
+{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    transform: translate(calc(19px * var(--x)),calc(19px * var(--y)));
+    transition: transform 0.5s,width 0.5s,height 0.5s,background 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    z-index: 1000;
+    overflow: hidden;
+    border: 1px solid rgb(255, 255, 255);
+
+}
+.navigation span::before
+{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 400%;
+    background: #00d0ff;
+    transition: 1s;
+    animation: animate 4s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+    z-index: 0;
+    border: px solid rgb(0, 0, 0);
+
+}
+.navigation.active span::before
+{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 400%;
+    background: #00d0ff;
+    transition: 1s;
+    animation: animate 4s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+    z-index: 0;
+    border: 2px solid rgb(0, 0, 0);
+
+}
+
+.navigation:hover::before
+{
+   width: 350px;
+}
+    @keyframes animate
+    {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+        100%
+        {
+            transform: rotate(360deg);
+            filter: hue-rotate(360deg);
+        }
+}
+.navigation span::after
+{
+    content: '';
+    position:absolute;
+    inset: 1px;
+    background: #10131c00;
+    transition: 0.5s;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+.navigation.active span:hover::before
+{
+    width: 100px;
+}
+.navigation.active span::after
+{
+    content: '';
+    position:absolute;
+    inset: 4px;
+    background: #10131c;
+    transition: 0.5s;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    z-index: 0;
+}
+
+
+
+.navigation.active span
+{
+    width: 45px;
+    height: 45px;
+    background: #ffffff;
+    transform: translate(calc(60px * var(--x)),calc(60px * var(--y)));
+    border: 1px solid rgb(0, 0, 0);
+
+}
+.navigation span ion-icon
+{
+    transition: 0.5s;
+    font-size: 0em;
+    z-index: 1000;
+}
+.navigation.active span ion-icon
+{
+    font-size: 1.35em;
+    color: #fff;
+}
+.navigation.active span:hover ion-icon
+{
+    color: #00c3ff;
+    filter: drop-shadow(0 0 2px #00c3ff) drop-shadow(0 0 5px #00c3ff) drop-shadow(0 0 25px #000000);
+}
+
+

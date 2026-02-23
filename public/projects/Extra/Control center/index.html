@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="border: 3px solid red;">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By Spark Pleazer</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <audio id="myAudio" src="music.mp3"></audio>
+    <div class="main">
+    <div class="container">
+        <div class="item i1" style="--i:1;">
+            <button class="btn b1"><ion-icon name="wifi-sharp"></ion-icon><span>Wi-Fi</span></button>
+            <button class="btn b2"><ion-icon name="bluetooth-sharp"></ion-icon><span>BlueTooth</span></button>
+            <button class="btn b3"><ion-icon name="radio-sharp"></ion-icon><span>AirDrop</span></button>
+        </div>
+        <div class="item i2" style="--i:2;">
+            <div class="box i1"><ion-icon name="moon"></ion-icon><span>Do Not<br>Disturb</span></div>
+            <div class="box i2"><ion-icon name="sunny"></ion-icon><br><span>Keyboard<br>Brightness</span></div>
+            <div class="box i3"><ion-icon name="tv"></ion-icon><br><span>AirPlay<br>Display</span></div>
+        </div>
+        <div class="item i4" style="--i:3;">
+
+            <div class="cover">
+                <img src="music.jpg">
+            </div>
+            <p class="title">The Drum<br><span>Song by Alan Walker</span></p>
+            <div class="controls"><ion-icon class="play" name="play"></ion-icon>
+                <ion-icon class="pause active" name="pause"></ion-icon>
+                <ion-icon name="play-forward"></ion-icon></div>
+        </div>
+    </div>
+</div>
+<div class="toggle">
+    <ion-icon name="toggle"></ion-icon>
+    <ion-icon class="Tdown" name="toggle"></ion-icon>
+</div>
+
+    <script>
+        let container = document.querySelector('.container');
+        let ToggleBTN = document.querySelector('.toggle');
+        var x = document.getElementById("myAudio");
+        let play = document.querySelector('.play');
+        let pause = document.querySelector('.pause');
+
+        ToggleBTN.onclick = () => {
+            container.classList.toggle('active');
+};
+    play.onclick = () => {
+    play.classList.toggle('active');
+    pause.classList.toggle('active');
+    x.play();
+};
+
+pause.onclick = () => {
+    pause.classList.toggle('active');
+    play.classList.toggle('active');
+    x.pause();
+};    </script>
+<script>
+        const list = document.querySelectorAll(".btn");
+      function activeLink(){
+          list.forEach((item) =>
+          this.classList.toggle('active'));
+      }
+      list.forEach((item) =>
+      item.addEventListener('click',activeLink))
+</script>
+<script>
+    const box = document.querySelectorAll(".box");
+  function activeBox(){
+      box.forEach((item) =>
+      this.classList.toggle('active'));
+  }
+  box.forEach((item) =>
+  item.addEventListener('click',activeBox))
+</script>
+
+</body>
+</html>

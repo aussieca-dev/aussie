@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body
+{
+    background: url(icons/back.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+}
+.sideBar
+{
+    position: relative;
+    background: #ffffff3c;
+    box-shadow: 0 0 15px 0 #00000054;
+    backdrop-filter: blur(30px);
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.sideBar.active .menu, .sideBar.active .service, .sideBar.active .settings, .sideBar.active .profile
+{
+    width: 60px;
+    font-size: 0;
+}
+.sideBar.active .closeBTN
+{
+    right: 30%;
+    top: 0px;
+    height: 10px;
+    width: 40px;
+    border-radius: 0px 0px 10px 10px;
+}
+.sideBar .closeBTN
+{
+    position: absolute;
+    right: 30%;
+    top: 0px;
+    height: 10px;
+    width: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: rgb(225, 161, 255);
+    padding: 10px 0;
+    border-radius: 0px 0px 10px 10px;
+    transition: 0.3s;
+    right: 0%;
+    top: 5%;
+    height: 20px;
+    border-radius: 10px 0px 0px 10px;
+    cursor: pointer;
+}
+.sideBar .closeBTN span
+{
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+.sideBar.active .closeBTN span
+{
+    transform: rotate(0deg);
+}
+.sideBar .menu
+{
+    position: relative;
+    height: auto;
+    width: 300px;
+    padding: 0px;
+    border-top: 3px solid #00000010;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.sideBar .service
+{
+    position: relative;
+    height: auto;
+    width: 300px;
+    border-top: 3px solid #0000001c;
+    padding-top: 20px;
+    margin: 20px 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.profile
+{
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    width: 300px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.profile-img
+{
+    position: relative;
+    background: hsl(267, 100%, 84%);
+    border-radius: 50%;
+    border: 3px solid #fcedff49;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.sideBar.active .profile-img
+{
+    margin-right: 0px;
+}
+.profile-img img
+{
+    width: 100%;
+}
+.heading
+{
+    color: rgba(0, 0, 0, 0.641);
+}
+.heading span
+{
+    color: rgba(0, 0, 0, 0.696);
+    font-weight: 600;
+}
+.li
+{
+    margin-bottom: 5px;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    color: rgba(0, 0, 0, 0.775);
+    font-weight: 500;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 3px solid rgba(138, 0, 0, 0);
+}
+.li:hover
+{
+    background: #00000012;
+}
+.li.active
+{
+    background: #006eff;
+    color: aliceblue;
+    font-weight: 600;
+    padding: 10px;
+}
+.li img
+{
+    height: 30px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+.sideBar.active .li img
+{
+    margin-right: 0px;
+    border: 3px solid rgba(255, 0, 0, 0);
+}
+.service .list
+{
+    background: #ffffffc2;
+    border-radius: 15px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px 10px;
+    border: 3px solid rgba(255, 0, 0, 0);
+}
+.sideBar.active .service .list
+{
+    padding: 3px;
+}
+.sideBar .service .list .li
+{
+    margin: 0px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.sideBar.active .service .list .li
+{
+    padding: 0px;
+    font-size: 0;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.sideBar.active .service .list .li.active
+{
+    border-radius: 9px;
+    padding: 0px;
+}
+.sideBar.active .service .list .li img
+{
+    margin: 5px;
+}
+.sideBar .settings
+{
+    position: relative;
+    height: auto;
+    width: 300px;
+    padding: 0px;
+    transition: 0.5s;
+}
+.option
+{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #ffffffc2;
+    padding: 0px;
+    border-radius: 15px;
+    width: auto;
+    height: 50px;
+    margin-bottom: 20px;
+    border: 3px solid rgba(255, 0, 0, 0);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.sideBar.active .option
+{
+    height: 230px;
+}
+.option .icon
+{
+    background: #02000000;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 5px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.option .icon:hover
+{
+    background: #02000034;
+}
+.option .icon.active img
+{
+    filter: invert(1);
+}
+.option .icon.active
+{
+    background: #006eff;
+}
+.task
+{
+    width: auto;
+    height: auto;
+    background: #ffffffc2;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+}
+.task button
+{
+    position: relative;
+    font-size: 40px;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    color: aliceblue;
+    background: #0048ff;
+    box-shadow: 0 0 10px 0 #0048ff;
+    border: 0;
+    border-radius: 50%;
+    margin: 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.sideBar.active .task button
+{
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    font-size: 30px;
+}
+.task button:hover
+{
+    animation: anime 1s;
+}
+.task p
+{
+    position: relative;
+    margin: 0;
+}
+.icon img
+{
+    height: 25px;
+    opacity: 0.8;
+    transition: 0.5s;
+}@keyframes anime
+{
+    0%
+    {
+        box-shadow: 0 0 10px 0 #0048ff;
+    }
+    50%
+    {
+        box-shadow: 0 0 10px 5px #4c7fff;
+    }
+    100%
+    {
+        box-shadow: 0 0 10px 0 #0048ff;
+    }
+}
+
