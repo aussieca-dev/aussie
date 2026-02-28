@@ -53,6 +53,7 @@ export default function ContactPage() {
         alert("Failed to send message.");
       }
     } catch (error) {
+      console.error(error);
       alert("Something went wrong.");
     }
 
