@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { Dot } from "lucide-react";
-
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -177,53 +176,53 @@ export default function Home() {
           The Advantage of Choosing This Course?
         </h2>
 
-<div className="grid md:grid-cols-2 gap-12 text-gray-700">
-  {/* Column 1 */}
-  <ul className="space-y-5">
-    {[
-      "Learn practical Australian accounting, not just theory",
-      "Designed specifically for Indian students and professionals",
-      "Based on 10+ years of direct experience with Australian clients",
-      "Step-by-step training on real compliance work (GST, BAS, Payroll, Div 7A)",
-      "Hands-on exposure to Xero software",
-    ].map((item, index) => (
-      <li
-        key={index}
-        className="flex items-start gap-4 group transition-all duration-300"
-      >
-        <div className="mt-1 flex-shrink-0">
-          <Dot />
-        </div>
-        <p className="leading-relaxed group-hover:text-black transition-colors duration-300">
-          {item}
-        </p>
-      </li>
-    ))}
-  </ul>
+        <div className="grid md:grid-cols-2 gap-12 text-gray-700">
+          {/* Column 1 */}
+          <ul className="space-y-5">
+            {[
+              "Learn practical Australian accounting, not just theory",
+              "Designed specifically for Indian students and professionals",
+              "Based on 10+ years of direct experience with Australian clients",
+              "Step-by-step training on real compliance work (GST, BAS, Payroll, Div 7A)",
+              "Hands-on exposure to Xero software",
+            ].map((item, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-4 group transition-all duration-300"
+              >
+                <div className="mt-1 flex-shrink-0">
+                  <Dot />
+                </div>
+                <p className="leading-relaxed group-hover:text-black transition-colors duration-300">
+                  {item}
+                </p>
+              </li>
+            ))}
+          </ul>
 
-  {/* Column 2 */}
-  <ul className="space-y-5">
-    {[
-      "Job-oriented curriculum focused on real industry requirements",
-      "Learn how Australian outsourcing firms actually work",
-      "Lifetime support even after course completion",
-      "Regular updates on law amendments",
-      "Clear roadmap to build a global accounting career",
-    ].map((item, index) => (
-      <li
-        key={index}
-        className="flex items-start gap-4 group transition-all duration-300"
-      >
-        <div className="mt-1 flex-shrink-0">
-          <Dot />
+          {/* Column 2 */}
+          <ul className="space-y-5">
+            {[
+              "Job-oriented curriculum focused on real industry requirements",
+              "Learn how Australian outsourcing firms actually work",
+              "Lifetime support even after course completion",
+              "Regular updates on law amendments",
+              "Clear roadmap to build a global accounting career",
+            ].map((item, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-4 group transition-all duration-300"
+              >
+                <div className="mt-1 flex-shrink-0">
+                  <Dot />
+                </div>
+                <p className="leading-relaxed group-hover:text-black transition-colors duration-300">
+                  {item}
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
-        <p className="leading-relaxed group-hover:text-black transition-colors duration-300">
-          {item}
-        </p>
-      </li>
-    ))}
-  </ul>
-</div>
       </section>
 
       {/* ================= 3 STEP CAREER SECTION ================= */}
@@ -357,12 +356,11 @@ export default function Home() {
           </h2>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-
             <button
-                          onClick={() => router.push("/contact")}
+              onClick={() => router.push("/pricing")}
               className="bg-white text-[#0e2a47] px-6 py-3 rounded-md font-semibold"
             >
-              Get in touch
+              Enroll now
             </button>
           </div>
         </div>

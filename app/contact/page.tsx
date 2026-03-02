@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface FormState {
@@ -10,6 +11,8 @@ interface FormState {
 }
 
 export default function ContactPage() {
+  const router = useRouter();
+
   const [formData, setFormData] = useState<FormState>({
     firstName: "",
     lastName: "",
@@ -49,6 +52,7 @@ export default function ContactPage() {
           email: "",
           phone: "",
         });
+        router.push("/pricing");
       } else {
         alert("Failed to send message.");
       }
